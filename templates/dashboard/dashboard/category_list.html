@@ -1,0 +1,37 @@
+{% extends '../base/base.html' %}
+
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        Category List
+        <a href="" class="btn btn-success float-right">Create New Category</a>
+
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <th>S/L</th>
+                <th>Name</th>
+                <th>Action</th>
+            </tr>
+            {% for category in categorys %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="">{{ category.name }}</a></td>
+                <td>
+                    <a href="" class="btn btn-primary">Edit</a>
+                    <a href=" " class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

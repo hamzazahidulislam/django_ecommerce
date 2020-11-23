@@ -1,0 +1,22 @@
+{% extends './base/base.htm' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 m-auto">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Update Profile</h3>
+                <div class="card-body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{form.as_p}}
+                        <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}

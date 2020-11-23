@@ -1,0 +1,33 @@
+{% extends './base/base.htm' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12 ">
+
+        <div class="card">
+            <div class="card-header">
+                <h3 style="text-align: center;">User Profile</h3>
+                <a class="btn btn-primary" href="{% url 'edit-profile' %}">
+                    <h3>Edit Profile
+                    </h3>
+                </a>
+                <div class="card-body">
+                    <!-- <h1>{{ user.get_full_name }}</h1>
+                    <h1>{{ profile.phone }}</h1>
+                    <img src="{{ profile.photo.url }}" alt=""> -->
+                    <hr>
+                    <h1>{{ user.get_full_name }}</h1>
+                    <h1>{{ user.profile.phone }}</h1>
+
+                    {% if user.profile.photo  %}
+                    <img src="{{ user.profile.photo.url }}" alt="">
+                    {% endif %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}
